@@ -51,7 +51,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="resultado">
      <property name="geometry">
       <rect>
        <x>85</x>
@@ -67,7 +67,7 @@
       <string/>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>5</x>
@@ -90,12 +90,18 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit">
+         <widget class="QLineEdit" name="num1">
           <property name="enabled">
            <bool>true</bool>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>Escriba su e-mail</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>
@@ -114,7 +120,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_2">
+         <widget class="QLineEdit" name="num2">
           <property name="styleSheet">
            <string notr="true">background-color: rgb(255, 255, 255);</string>
           </property>
@@ -143,7 +149,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -156,16 +162,19 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="QRadioButton" name="radioButton">
+         <widget class="QRadioButton" name="sumar">
           <property name="text">
-           <string>RadioButton</string>
+           <string>Sumar</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="radioButton_2">
+         <widget class="QRadioButton" name="restar">
           <property name="text">
-           <string>RadioButton</string>
+           <string>Restar</string>
           </property>
           <property name="autoExclusive">
            <bool>true</bool>
@@ -173,16 +182,16 @@
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="radioButton_3">
+         <widget class="QRadioButton" name="multiplicar">
           <property name="text">
-           <string>RadioButton</string>
+           <string>Multiplicar</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QRadioButton" name="radioButton_4">
+         <widget class="QRadioButton" name="dividir">
           <property name="text">
-           <string>RadioButton</string>
+           <string>Dividir</string>
           </property>
          </widget>
         </item>
@@ -208,7 +217,7 @@
 color: rgb(255,255,255);</string>
         </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>Calcular</string>
         </property>
        </widget>
       </item>
@@ -225,8 +234,20 @@ color: rgb(255,255,255);</string>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuCerrar">
+    <property name="title">
+     <string>Cerrar</string>
+    </property>
+    <addaction name="actionSalir"/>
+   </widget>
+   <addaction name="menuCerrar"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
